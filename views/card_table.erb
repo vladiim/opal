@@ -1,0 +1,21 @@
+<h2> <span class="card-details-title" data-toggle="popover" data-html="true" data-content="&lt;ul&gt; &lt;li&gt; &lt;a href=&quot;#&quot;class=&quot;inner-form&quot; &gt;Card #1&lt;/a&gt; &lt;li&gt; &lt;a href=&quot;#&quot;class=&quot;inner-form&quot; &gt;Card #2&lt;/a&gt; &lt;/li&gt; &lt;/li&gt; &lt;/ul&gt;" data-placement='right'>Card #1</span></h2>
+
+<table class='table table-hover '>
+  <thead>
+    <th>Date</th>
+    <th>Time</th>
+    <th>From</th>
+    <th>To</th>
+    <th>Fare</th>
+    <th>Balance</th>
+  </thead>
+
+  <tbody class='table-striped'>
+    <% 18.times do %>
+      <%= erb :card_table_row %>
+    <% end %>
+  </tbody>
+
+</table>
+
+<a href="/" class='btn btn-primary btn-lg pull-right'>Download</a>

@@ -1,4 +1,4 @@
-footer {
+#card-details, footer {
   border-color: #e7e7e7;
   background-color: #f8f8f8;
   border: 1px solid transparent;
@@ -7,7 +7,7 @@ footer {
   padding: 10px;
 }
 
-#payment, #details {
+.tab-content {
   margin: 0 30px;
 }
 
@@ -42,16 +42,31 @@ footer {
   color: #2a6496;
 }
 
+.card-details-title,
+.card-details-name {
+  color: #2a6496;
+}
+
+.card-button a {
+  width: 170px;
+  margin-bottom: 10px;
+}
+
 .inner-form {
-  font-size: 70% !important;
+  font-size: 70%;
+}
+
+#card-details .inner-form {
+  font-size: 100%;
+}
+
+#card-details .popover-content {
+  padding: 10px;
+  width: 120px;
 }
 
 .result-fare .inner-form {
   font-size: 50% !important;
-}
-
-.popover-title {
-  margin-bottom: -20px;
 }
 
 .popover-content {
@@ -64,4 +79,8 @@ footer {
 
 .popover-content ul li a {
   margin-left: -35px;
+}
+
+#card-details {
+  margin-top: 70px;
 }

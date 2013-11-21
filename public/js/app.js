@@ -1,13 +1,10 @@
+// CAN I USE OPAL CARD
+
 $(".form-place-to").popover();
-
 $(".form-place-from").popover();
-
 $(".form-trip").popover();
-
 $(".form-day").popover();
-
 $(".result-fare").popover();
-
 $('.result-provider').popover();
 
 $(document).on('click', ".form-place-to", function() {
@@ -31,3 +28,8 @@ $(document).on('click', ".form-place-from", function() {
     $('.result-fare').text('$' + dollar + '.' + cents);
   });
 });
+
+// ADMIN
+
+$(".card-details-title").popover();
+$(".card-details-name").popover();

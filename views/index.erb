@@ -15,13 +15,19 @@
     <![endif]-->
   </head>
   <body>
-    <section class='container'>
-      <div class='row'>
-        <div class='col-lg-12'>
+    <section>
+      <div>
+        <div>
 
           <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
               <a class="navbar-brand" href="/">Opal</a>
             </div>
 
@@ -86,27 +92,29 @@
             </div><!-- /.navbar-collapse -->
           </nav>
 
-          <section id='main'>
-            <% if content == 'home' %>
-              <%= erb :home_logged_out %>
+          <section id='main' class='row'>
+            <div class='col-xs-12'>
+              <% if content == 'home' %>
+                <%= erb :home_logged_out %>
 
-            <% elsif content == 'order' %>
-              <%= erb :order %>
+              <% elsif content == 'order' %>
+                <%= erb :order %>
 
-            <% elsif content == 'about' %>
-              <%= erb :about %>
+              <% elsif content == 'about' %>
+                <%= erb :about %>
 
-            <% elsif content == 'admin' %>
-              <%= erb :admin %>
+              <% elsif content == 'admin' %>
+                <%= erb :admin %>
 
-            <% elsif content == 'can-i-use-opal-card' %>
-              <%= erb :can_i_use_opal_card %>
-            <% end %>
+              <% elsif content == 'can-i-use-opal-card' %>
+                <%= erb :can_i_use_opal_card %>
+              <% end %>
+            </div>
           </section>
 
           <!-- footer -->
           <footer class='row'>
-            <section class="col-md-3">
+            <section class="col-sm-3">
               <h4>Site</h4>
               <ul>
                 <li><a href="#">Terms</a></li>
@@ -117,7 +125,7 @@
               </ul>
             </section>
 
-            <section class="col-md-3">
+            <section class="col-sm-3">
               <h4>Opal</h4>
               <ul>
                 <li><a href="#">Terms</a></li>
@@ -127,7 +135,7 @@
               </ul>
             </section>
 
-            <section class="col-md-3">
+            <section class="col-sm-3">
               <h4>Contact us</h4>
               <ul>
                 <li><a href="#">13 67 25</a></li>
@@ -135,7 +143,7 @@
               </ul>
             </section>
 
-            <section class="col-md-3">
+            <section class="col-sm-3">
               <h4>External links</h4>
               <ul>
                 <li><a href="#">Transport info</a></li>
