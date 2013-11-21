@@ -31,3 +31,7 @@ end
 get '/admin' do
   erb :index, locals: { content: 'admin', logged: 'in' }
 end
+
+get "/nav" do
+  erb :index, locals: { content: 'nav', logged: 'out' }
+end
