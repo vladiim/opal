@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Opal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <section class='container'>
+      <div class='row'>
+        <div class='col-lg-12'>
+
+          <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/">Opal</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+              <ul class="nav navbar-nav">
+
+                <% if logged == 'out' %>
+                  <li><a href="/order">Order</a></li>
+                <% else %>
+                  <li><a href="/admin">vlad@holler.com.au</a></li>
+                <% end %>
+                <li><a href="/about">About</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rollout (75%) <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/can-i-use-opal-card">Can I use Opal Card?</a></li>
+                    <li><a href="#">Rollout timeline</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/contact">Contact us</a></li>
+                    <li><a href="/faq">FAQs</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+
+              <ul class="nav navbar-nav navbar-right">
+                <% if logged == 'out' %>
+                  <li><a href="#" data-toggle="modal" data-target="#login">Log in</a></li>
+                <% else %>
+                  <li><a href="#" data-toggle="modal" data-target="#login">Log out</a></li>
+                <% end %>
+
+                <li><a href="#"><small>A</small> | A</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">English<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Arabic</a></li>
+                    <li><a href="#">Chinese</a></li>
+                    <li><a href="#">French</a></li>
+                    <li><a href="#">Greek</a></li>
+                    <li><a href="#">Italian</a></li>
+                    <li><a href="#">Japanese</a></li>
+                    <li><a href="#">Korean</a></li>
+                    <li><a href="#">German</a></li>
+                    <li><a href="#">Spanish</a></li>
+                    <li><a href="#">Vietnamese</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </nav>
+
+          <section id='main'>
+            <% if content == 'home' %>
+              <%= erb :home_logged_out %>
+
+            <% elsif content == 'order' %>
+              <%= erb :order %>
+
+            <% elsif content == 'about' %>
+              <%= erb :about %>
+
+            <% elsif content == 'admin' %>
+              <%= erb :admin %>
+
+            <% elsif content == 'can-i-use-opal-card' %>
+              <%= erb :can_i_use_opal_card %>
+            <% end %>
+          </section>
+
+          <!-- footer -->
+          <footer class='row'>
+            <section class="col-md-3">
+              <h4>Site</h4>
+              <ul>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Glossary</a></li>
+                <li><a href="#">Site map</a></li>
+                <li><a href="#">Site help</a></li>
+              </ul>
+            </section>
+
+            <section class="col-md-3">
+              <h4>Opal</h4>
+              <ul>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Media</a></li>
+                <li><a href="#">FAQs</a></li>
+              </ul>
+            </section>
+
+            <section class="col-md-3">
+              <h4>Contact us</h4>
+              <ul>
+                <li><a href="#">13 67 25</a></li>
+                <li><a href="#">Email</a></li>
+              </ul>
+            </section>
+
+            <section class="col-md-3">
+              <h4>External links</h4>
+              <ul>
+                <li><a href="#">Transport info</a></li>
+                <li><a href="#">Transport for NSW</a></li>
+                <li><a href="#">NSW Government</a></li>
+                <li><a href="#">Adobe Reader</a></li>
+              </ul>
+            </section>
+          </footer>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Login</h4>
+        </div>
+        <div class="modal-body">
+
+          <form role="form">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <a href='/loggedin' type="button" class="btn btn-primary">Log in</a>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+</html>

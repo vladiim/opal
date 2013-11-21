@@ -1,0 +1,67 @@
+footer {
+  border-color: #e7e7e7;
+  background-color: #f8f8f8;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+}
+
+#payment, #details {
+  margin: 0 30px;
+}
+
+#aus-dropdown {
+  /*width: 92.5%;*/
+}
+
+#form-button {
+  margin: 0 0 0 750px;
+}
+
+#main {
+  margin: 60px 0 50px 0;
+}
+
+#can-i-use-form {
+  font-size: 320%;
+}
+
+#can-i-use-result {
+  font-size: 200%;
+}
+
+.form-place-to,
+.form-place-from,
+.form-trip,
+.form-day,
+.result-fare,
+.result-provider {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #2a6496;
+}
+
+.inner-form {
+  font-size: 70% !important;
+}
+
+.result-fare .inner-form {
+  font-size: 50% !important;
+}
+
+.popover-title {
+  margin-bottom: -20px;
+}
+
+.popover-content {
+  padding: 0 14px;
+}
+
+.popover-content ul li {
+  list-style: none;
+}
+
+.popover-content ul li a {
+  margin-left: -35px;
+}
